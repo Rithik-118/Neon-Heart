@@ -9,8 +9,8 @@ let scene, camera, renderer, particles, composer, controls;
 let time = 0;
 let isAnimationEnabled = true;
 let currentTheme = 'molten';
-let morphTarget = 0;
-let morphProgress = 0;
+let morphTarget = 1;
+let morphProgress = 1;
 
 const particleCount = 10000;
 
@@ -228,9 +228,9 @@ function createParticleSystem() {
     const starPos = createStarPath(i, particleCount);
     const heartPos = createHeartPath(i, particleCount);
 
-    positions[i3] = starPos.x;
-    positions[i3 + 1] = starPos.y;
-    positions[i3 + 2] = starPos.z;
+    positions[i3] = heartPos.x;
+    positions[i3 + 1] = heartPos.y;
+    positions[i3 + 2] = heartPos.z;
 
     starPositions[i3] = starPos.x;
     starPositions[i3 + 1] = starPos.y;
